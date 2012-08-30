@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Estado de las salas</title>
+        <link rel="icon" href="http://127.0.0.1/imagenes/circulo_verde.png" >
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.js"></script>
+        
+        <link type="text/css" href="http://127.0.0.1/javascript/jquery-ui-1.8.22.custom/css/black-tie/jquery-ui-1.8.22.custom.css" rel="Stylesheet" />	
+        <script type="text/javascript" src="http://127.0.0.1/javascript/jquery-ui-1.8.22.custom/js/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="http://127.0.0.1/javascript/jquery-ui-1.8.22.custom/js/jquery-ui-1.8.22.custom.min.js"></script>
+        
+        <script>
+	        $(function() {
+		        $( "#tabs" ).tabs();
+	        });
+	    </script>
+	    
+	    <script>
+	        $(function() {
+		        $( ".check" ).button();
+		        $( "#format" ).buttonset();
+	        });
+	    </script>
+	    
+    </head>
+
+
+    <body>
+    <div id="contenido">
+        <h1>Estado de las salas</h1>
+        
+        <div id="tabs">
+	        <ul>
+		        <li><a href="#tabs-1">Sala A</a></li>
+		        <li><a href="#tabs-2">Sala ET</a></li>
+		        <li><a href="#tabs-3">Sala E</a></li>
+		        <li><a href="#tabs-4">Sala F</a></li>
+	        </ul>
+	        
+            {% if estado %}
+                {% for sala,maquinas in estado.items %}
+                <div id="tabs-{{ forloop.counter }}">
+                <table border="0">
+                    <th> 
+                        <input class="check" type="checkbox" id="check{{sala}}" /><label for="check{{sala}}{{numero}}">x</label>
+                        Toda sala {{sala}}
+                    </th>
+                    <tr>
+                        <th> Selec </th>
+                        <th> Maquina </th>
+                        <th> Encendida </th>
+                        <th> SSH </th>
+                    </tr>
+
+                    {% for numero,value in maquinas.items %}
+                    <tr id="{{ sala }}{{ numero }}">
+                        <td> 
+                            <input class="check" type="checkbox" id="check{{sala}}{{numero}}" /><label for="check{{sala}}{{numero}}">x</label>
+                        </td>
+                        <td> {{ sala }}{{ numero }} </td>
+
+                        
+                        {% for valor in value %}
+                            {% if forloop.counter0 == 0 %}
+                            <td class="ping">
+                            {% endif %}
+                            {% if forloop.counter0 == 1 %}
+                            <td class="ssh">
+                            {% endif %}
+                                <img src="http://www.deckmaster.com.ph/images/loading52.gif" alt="some_text" width="20" height="20"/>
+                            </td>
+                        {% endfor %}
+                        
+                    </tr>
+                    {% endfor %}
+                </table>
+                </div>
+                {% endfor %}
+ 
+
+            <button type="button" onclick="llamar()">Actualizar</button>
+            {% else %}
+        No hay maquinas aun para mostrar estado
+        <button type="button" onclick="llamar()">Actualizar</button>
+        {% endif %}
+        
+        </div>
+        <script type="text/javascript" src="http://127.0.0.1/javascript/maquinas.js"></script>
+    </body>
+</html>

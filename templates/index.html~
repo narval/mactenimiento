@@ -1,0 +1,52 @@
+<html>
+<body>
+{% if estado %}
+<table>
+<tr>
+{% for sala,maquinas in estado.items %}
+<td>
+<table border="0">
+<tr>
+  <th> {{ sala }} </th>
+</tr>
+<tr>
+  <th> Maquina </th>
+  <th> Encendida </th>
+  <th> SSH </th>
+  <!-- <th> Dsitrib </th> -->
+{% for key,value in maquinas.items %}
+<tr>
+  <td> {{ sala }}{{ key }} </td>
+  {% for valor in value %}
+  <td>
+    {% if valor  == "v" %}
+      <img src="http://www.clker.com/cliparts/6/7/F/k/A/S/led-light-green-led-circle-th.png" alt="some_text" width="20" height="20"/>
+    {% endif %}
+    {% if valor == "w"%}
+      <img src="http://windowsteamblog.com/cfs-filesystemfile.ashx/__key/CommunityServer-Blogs-Components-WeblogFiles/00-00-00-59-23-metablogapi/1018.5_5F00_thumb_5F00_080FF54A.png" alt="some_text" width="20" height="20"/>  
+    {% endif %}
+    {% if valor == "l"%}
+     <img src="http://www.futurosoft.es/blog-diseno-web/wp-content/uploads/2011/11/Linux_Logo.png" alt="some_text" width="20" height="20"/>  
+    {% endif %}
+    {% if valor == "?"%}
+     <img src="http://upload.wikimedia.org/wikipedia/commons/3/33/White_square_with_question_mark.png" alt="some_text" width="20" height="20"/>  
+    {% endif %}    
+    
+    {% if valor == "r" %} 
+      <img src="http://www.clker.com/cliparts/5/7/b/5/1194989231691813435led_circle_red.svg.thumb.png" alt="some_text" width="20" height="20"/>
+    {% endif %}
+  </td>
+  {% endfor %}
+</tr>
+{% endfor %}
+</table>
+</td>
+<td width="30"></td>
+{% endfor %}
+</tr>
+</table>
+{% else %}
+   No hay maquinas aun para mostrar estado
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,57 @@
+import threading
+import commands
+import time
+import os
+
+
+def main():
+lista_maquinas = range(1, 24)
+hilos = []
+encendida = {}
+#print lista_maquinas
+
+class hilo_ping (threading.Thread):
+    def __init__(self, ip):
+        self.seguir = True
+        self.ip = ip
+        self.tiempo = 0
+        threading.Thread.__init__(self)
+        
+    def run(self):
+        while self.seguir:
+            comando = "ping -c 1 >>/dev/null " + "f" + str(self.ip) + ".ac.labf.usb.ve -W 1"
+            #test = commands.getoutput(comando)
+            if not os.system(comando):
+                encendida[self.ip] = True
+            else:
+                encendida[self.ip] = False
+            #self.seguir = False
+            
+    def stop(self):
+        self.seguir = False
+
+    def stopped(self):
+        return self._stop.isSet()
+
+        
+for i in lista_maquinas:
+    nuevo_hijo = hilo_ping(i)
+    nuevo_hijo.start()
+    hilos.append(nuevo_hijo)
+
+def detener():
+    for h in hilos:
+        h.stop()
+        
+        
+time.sleep(2)
+detener()
+print encendida
+entrada = None
+while entrada == None:
+    entrada = raw_input("Press Enter to continue...")
+detener()
+
+if __name__ == '__main__':
+    pygame.init()
+    main()
