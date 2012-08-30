@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     url(r'^$', 'views.index'),
     url(r'^maquinas/$', 'ping.views.index'),
     url(r'^prendidas/$', 'ping.views.prendidas'),
-    
+    url(r'^todas/$', 'ping.views.todas'),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     #url(r'^login/$', 'ping.login.index'),
     #url(r'^ping/(?P<maquina_id>\d+)/$', 'ping.views.detail'),

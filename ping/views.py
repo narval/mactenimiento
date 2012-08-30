@@ -30,3 +30,6 @@ def prendidas(request):
     import json
     return HttpResponse(json.dumps(verEstado()), mimetype = 'application/javascript')
     
+def todas(request):
+    import json
+    return HttpResponse(json.dumps(verMaquinas()), mimetype = 'application/javascript')

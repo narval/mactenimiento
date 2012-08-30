@@ -31,7 +31,6 @@ class hilo_ping (threading.Thread):
                     actual["ssh"] = "v"
                 else:
                     actual["ssh"] = "r"
-                print self.sala + str(self.numero)
                     
                 #cambiar el orden (linux primero)
                 """
@@ -48,6 +47,7 @@ class hilo_ping (threading.Thread):
                 actual["ping"] = "r"
                 actual["ssh"] = "r"
                 #actual.append("?")
+            print self.sala + str(self.numero)
             salas[self.sala][self.numero] = actual
             
             self.seguir = False
@@ -62,7 +62,7 @@ def verMaquinas():
     salida = {"a" : {}, "e" : {}, "f" : {}, "et" : {}}
     for sala in ["a", "e", "f", "et"]:
         for numero in range(1, 25):
-            salida[sala][numero] = [1, 2]
+            salida[sala][numero] = {"ping" : 1,"ssh" : 2}
     return salida
 
 def verEstado():

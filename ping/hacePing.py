@@ -62,7 +62,7 @@ def verMaquinas():
     salida = {"a" : {}, "e" : {}, "f" : {}, "et" : {}}
     for sala in ["a", "e", "f", "et"]:
         for numero in range(1, 25):
-            salida[sala][numero] = [1, 2]
+            salida[sala][numero] = {"ping" : 1,"ssh" : 2}
     return salida
 
 def verEstado():

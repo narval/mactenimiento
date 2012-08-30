@@ -7,8 +7,10 @@ def index(request):
     if request.user.is_authenticated():
         # aqui la base de datos proporciona la lista de maquinas funcionales
         # por sala y se pasa en el contexto
+        maquinas = verMaquinas()
         t = loader.get_template('maquinas.html')
         c = Context({
+        'estado' : maquinas,
         })
         return HttpResponse(t.render(c))
     else:

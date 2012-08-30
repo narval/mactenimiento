@@ -1,6 +1,23 @@
-<html>
-    <head>
-        <title>Estado de las salas</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+		
+	<link rel="stylesheet" href="http://127.0.0.1/Assets/Style/estiloMenu.css">
+	
+	<script src="http://127.0.0.1/NavBar/jquery.min.js" type="text/javascript">
+    </script>
+	
+	<script src="http://127.0.0.1/NavBar/jquery.easing.1.3.js" type="text/javascript">
+    </script>
+	
+	<script src="http://127.0.0.1/NavBar/animated-menu.js" type="text/javascript">
+    </script>
+    
+    <title>Estado de las salas</title>
         <link rel="icon" href="http://127.0.0.1/imagenes/circulo_verde.png" >
         
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.js"></script>
@@ -21,12 +38,134 @@
 		        $( "#format" ).buttonset();
 	        });
 	    </script>
-	    
-    </head>
+
+	<title>Sistema de MACtenimiento</title>
+
+</head>
+<style>
+
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:14px;
+	margin: 0px;
+}
+
+#Banner {
+	height:120px; 
+	background-color:#000;
+	min-width: 1024px
+}
+
+#logo {
+	height: 95%;
+	width: 400px;
+	background-image: url(Assets/Imagenes/logo.png);
+	background-repeat:no-repeat;
+	margin-left: 25%;
+	color:#CCC;
+	padding-left: 130px;
+
+}
+
+#Banner h1 {
+	color: #CCC;
+	height:95%;
+	margin: 0px;
+}
+
+.Colorcito {
+	background-color: #454E50;
+	height: 5px;
+}
+
+.container {
+	width: 80%;
+	background-color: #454E50;
+	margin: 0 auto;
+	min-width: 1024px;
+
+}
+
+#wrap {
+	margin-top:4px;
+	min-width:1024px;
+}
+
+.sidebar{
+	height: 600px;
+	margin: auto;
+	width: 20%;
+	float: left;
+	background-color:#FFF;
+}
+
+.content {
+	width: 60%;
+	float: left;
+	height:600px;
+	margin:auto;
+	background-color:#454E50;
+}
+
+.footer {
+	height: 80px;
+	background-color: #6F7D94;
+	clear: both;
+	min-width: 1024px;
+	width: 100%; 
+}
+</style>
 
 
-    <body>
-    <div id="contenido">
+<body>
+
+<div id="container">
+  <div id="Banner">
+     	<div class="Colorcito">
+       	</div>
+   		
+   	<div id="logo">
+    <h1 style="color:#2F9AB9; padding:20px 0 0 10px">Sistema de MACtenimiento</h1>
+    <p style=" margin-top: -60px; padding: 0 0 0 10px">Frefretion y mas frefretion</p>
+   
+    </div>
+        
+   	<div class="Colorcito">
+   	</div>
+	</div>
+
+<div id="wrap">
+	<div class="sidebar">
+	</div>
+
+  	<div class="content">
+	
+	<ul>
+		<li class="yellow" style="overflow: hidden; height: 50px; display: block; ">
+			<p><a href="#">Inicio</a></p>
+			<p class="subtext">Página de inicio del super sistema.</p>
+		</li>
+		<li class="orange" style="overflow: hidden; height: 50px; display: block; ">
+			<p><a href="#">Agenda</a></p>
+			<p class="subtext">Actividades programadas<br />
+			 para cada maquina.</p>
+		</li>
+		<li class="red" style="overflow: hidden; height: 50px; display: block; ">
+			<p><a href="http://buildinternet.com/live/smoothmenu/animated-menu.html#">Estados</a></p>
+			<p class="subtext">Muetra el estado de las maquinas.</p>
+		</li>
+		<li class="blue" style="overflow: hidden; height: 50px; display: block; ">
+			<p><a href="#">Nosotros</a></p>
+			<p class="subtext">¿Quiénes somos en el MAC?</p>
+		</li>
+		<li class="green" style="overflow: hidden; height: 50px; display: block; ">
+			<p><a href="#">Login</a></p>
+			<p class="subtext">Iniciar Sesión <br />
+			(solo para miembros)</p>
+		</li>
+	</ul>
+	
+	<div id="contenido">
         <h1>Estado de las salas</h1>
         
         <div id="tabs">
@@ -67,7 +206,7 @@
                             {% if forloop.counter0 == 1 %}
                             <td class="ssh">
                             {% endif %}
-                                <img src="http://www.deckmaster.com.ph/images/loading52.gif" alt="some_text" width="20" height="20"/>
+                                <img src="http://127.0.0.1/imagenes/loading.gif" alt="some_text" width="20" height="20"/>
                             </td>
                         {% endfor %}
                         
@@ -86,5 +225,22 @@
         
         </div>
         <script type="text/javascript" src="http://127.0.0.1/javascript/maquinas.js"></script>
-    </body>
+	
+	<script src="./Smooth Animated jQuery Menu_files/ga.js" type="text/javascript"></script>
+    
+	</div>
+
+    <div class="sidebar">
+	</div>
+  
+    
+	<div class="footer">
+	</div>
+    
+</div>	
+	
+</div>
+
+
+</body>
 </html>
