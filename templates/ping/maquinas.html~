@@ -2,29 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 
 <head>
-
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-		
+	<link rel="stylesheet" href="http://127.0.0.1/Assets/Style/estiloGeneral.css" />
+    
+<!-- BARRA DE NAVEGACION -->		
 	<link rel="stylesheet" href="http://127.0.0.1/Assets/Style/estiloMenu.css">
-	
 	<script src="http://127.0.0.1/NavBar/jquery.min.js" type="text/javascript">
     </script>
-	
 	<script src="http://127.0.0.1/NavBar/jquery.easing.1.3.js" type="text/javascript">
     </script>
-	
 	<script src="http://127.0.0.1/NavBar/animated-menu.js" type="text/javascript">
     </script>
     
-    <title>Estado de las salas</title>
-        <link rel="icon" href="http://127.0.0.1/imagenes/circulo_verde.png" >
-        
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.js"></script>
-        
-        <link type="text/css" href="http://127.0.0.1/javascript/jquery-ui-1.8.22.custom/css/black-tie/jquery-ui-1.8.22.custom.css" rel="Stylesheet" />	
-        <script type="text/javascript" src="http://127.0.0.1/javascript/jquery-ui-1.8.22.custom/js/jquery-1.4.4.min.js"></script>
-        <script type="text/javascript" src="http://127.0.0.1/javascript/jquery-ui-1.8.22.custom/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="http://127.0.0.1/javascript/jquery-ui-1.8.22.custom/js/jquery-ui-1.8.22.custom.min.js"></script>
         
         <script>
 	        $(function() {
@@ -38,137 +28,68 @@
 		        $( "#format" ).buttonset();
 	        });
 	    </script>
-
+	
 	<title>Sistema de MACtenimiento</title>
 
 </head>
-<style>
-
-body {
-	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size:14px;
-	margin: 0px;
-}
-
-#Banner {
-	height:120px; 
-	background-color:#000;
-	min-width: 1024px
-}
-
-#logo {
-	height: 95%;
-	width: 400px;
-	background-image: url(Assets/Imagenes/logo.png);
-	background-repeat:no-repeat;
-	margin-left: 25%;
-	color:#CCC;
-	padding-left: 130px;
-
-}
-
-#Banner h1 {
-	color: #CCC;
-	height:95%;
-	margin: 0px;
-}
-
-.Colorcito {
-	background-color: #454E50;
-	height: 5px;
-}
-
-.container {
-	width: 80%;
-	background-color: #454E50;
-	margin: 0 auto;
-	min-width: 1024px;
-
-}
-
-#wrap {
-	margin-top:4px;
-	min-width:1024px;
-}
-
-.sidebar{
-	height: 600px;
-	margin: auto;
-	width: 20%;
-	float: left;
-	background-color:#FFF;
-}
-
-.content {
-	width: 60%;
-	float: left;
-	height:600px;
-	margin:auto;
-	background-color:#454E50;
-}
-
-.footer {
-	height: 80px;
-	background-color: #6F7D94;
-	clear: both;
-	min-width: 1024px;
-	width: 100%; 
-}
-</style>
-
 
 <body>
 
+<!-- INICIO CONTENEDOR -->	
 <div id="container">
-  <div id="Banner">
-     	<div class="Colorcito">
-       	</div>
-   		
-   	<div id="logo">
-    <h1 style="color:#2F9AB9; padding:20px 0 0 10px">Sistema de MACtenimiento</h1>
-    <p style=" margin-top: -60px; padding: 0 0 0 10px">Frefretion y mas frefretion</p>
-   
-    </div>
-        
-   	<div class="Colorcito">
-   	</div>
+	<!-- INICIO BANNER -->	
+	<div id="Banner">
+        <div class="Colorcito">
+        </div>
+            
+            <div id="logo">
+                <h1 style="color:#2F9AB9; padding:20px 0 0 10px">Sistema de MACtenimiento</h1>
+                <p style=" margin-top: -60px; padding: 0 0 0 10px">Frefretion y mas frefretion</p>
+            </div>
+            
+        <div class="Colorcito">
+        </div>
 	</div>
+    <!-- FINAL BANNER -->	
 
-<div id="wrap">
-	<div class="sidebar">
-	</div>
-
-  	<div class="content">
-	
-	<ul>
-		<li class="yellow" style="overflow: hidden; height: 50px; display: block; ">
-			<p><a href="#">Inicio</a></p>
-			<p class="subtext">Página de inicio del super sistema.</p>
-		</li>
-		<li class="orange" style="overflow: hidden; height: 50px; display: block; ">
-			<p><a href="#">Agenda</a></p>
-			<p class="subtext">Actividades programadas<br />
-			 para cada maquina.</p>
-		</li>
-		<li class="red" style="overflow: hidden; height: 50px; display: block; ">
-			<p><a href="http://buildinternet.com/live/smoothmenu/animated-menu.html#">Estados</a></p>
-			<p class="subtext">Muetra el estado de las maquinas.</p>
-		</li>
-		<li class="blue" style="overflow: hidden; height: 50px; display: block; ">
-			<p><a href="#">Nosotros</a></p>
-			<p class="subtext">¿Quiénes somos en el MAC?</p>
-		</li>
-		<li class="green" style="overflow: hidden; height: 50px; display: block; ">
-			<p><a href="#">Login</a></p>
-			<p class="subtext">Iniciar Sesión <br />
-			(solo para miembros)</p>
-		</li>
-	</ul>
-	
-	<div id="contenido">
-        <h1>Estado de las salas</h1>
+	<!-- INICIO WRAP (NO EL DE SUBWAY) -->
+    <div id="wrap">
+        <div class="sidebar">
+        </div>
+    	<!-- INICIO CONTENEDOR DE COSAS -->
+        <div class="content">
         
-        <div id="tabs">
+        <!-- #BeginLibraryItem "/Library/Barra de Navegacion.lbi" -->
+        <nav style="float:none">
+          <ul>
+            <li class="yellow" style="overflow: hidden; height: 50px; display: block; ">
+              <p><a href="index.html">Inicio</a></p>
+              <p class="subtext">Página de inicio del super sistema.</p>
+            </li>
+            <li class="orange" style="overflow: hidden; height: 50px; display: block; ">
+              <p><a href="Agenda.html">Agenda</a></p>
+              <p class="subtext">Actividades programadas.</p>
+            </li>
+            <li class="red" style="overflow: hidden; height: 50px; display: block; ">
+              <p><a href="Estados.html">Estados</a></p>
+              <p class="subtext">Muetra el estado de las maquinas.</p>
+            </li>
+            <li class="blue" style="overflow: hidden; height: 50px; display: block; ">
+              <p><a href="Nosotros.html">Nosotros</a></p>
+              <p class="subtext">¿Quiénes somos en el MAC?</p>
+            </li>
+            <li class="green" style="overflow: hidden; height: 50px; display: block; ">
+              <p><a href="Login.html">Login</a></p>
+              <p class="subtext">Iniciar Sesión</p>
+            </li>
+          </ul>
+        </nav>
+        <!-- #EndLibraryItem -->        <!-- INCIO DE LA PARTE MAS IMPORTANTE, EN EL DIV COSAS VAN LAS COSAS QUE CAMBIEN -->
+            <div id="cosas" style="padding: 80px 30px 30px 30px">
+            
+                <h1> Estados </h1>
+                
+                <div id="tabs">
 	        <ul>
 		        <li><a href="#tabs-1">Sala A</a></li>
 		        <li><a href="#tabs-2">Sala ET</a></li>
@@ -217,30 +138,40 @@ body {
                 {% endfor %}
  
 
-            <button type="button" onclick="llamar()">Actualizar</button>
+            <button type="button" onclick="actualizar()">Actualizar</button>
             {% else %}
         No hay maquinas aun para mostrar estado
-        <button type="button" onclick="llamar()">Actualizar</button>
+        <button type="button" onclick="actualizar()">Actualizar</button>
         {% endif %}
         
         </div>
-        <script type="text/javascript" src="http://127.0.0.1/javascript/maquinas.js"></script>
+            
+          
+          </div>
+            <!-- FINAL DE COSAS -->
+    
+      </div>
+        <!-- FINAL DEL CONTENEDOR -->
+    
+        <div class="sidebar">
+        </div>
+        
+        <div class="Colorcito" style="float:left; width:100%; ">
+        </div>
+      
+        
+      <div class="footer">
+        <p> Sartenejas, Baruta, Edo. Miranda - Universidad Simón Bolívar<br />
+		MAC - 2012 </p>
+      </div>
+	    
+    </div>	
+	<!-- FINAL WRAP -->
+</div>
+<!-- FINAL CONTENEDOR -->
+<script type="text/javascript" src="http://127.0.0.1/javascript/maquinas.js"></script>
 	
 	<script src="./Smooth Animated jQuery Menu_files/ga.js" type="text/javascript"></script>
-    
-	</div>
-
-    <div class="sidebar">
-	</div>
-  
-    
-	<div class="footer">
-	</div>
-    
-</div>	
-	
-</div>
-
 
 </body>
 </html>
